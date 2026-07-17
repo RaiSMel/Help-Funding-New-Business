@@ -12,6 +12,7 @@ Utilize a lista abaixo para ir até o conteúdo de interesse.
 
 <hr>
 <br>
+
 ## Configurações do Git
 
 Com o comando config --list é listado todas as configurações do git dentro da máquina.
