@@ -72,4 +72,8 @@ Para fazer o commit utilize o comando abaixo, adicione o que foi modificado brev
 git commit -m"ESCREVA"
 `
 
-Agora para finalizar iremos fazer o envio com o comando de enviar que é o pull, utilizando novamente o -u, 
+Agora para finalizar iremos fazer o envio com o comando de enviar que é o pull, utilizando novamente o -u, indicando o repositório local e a branch.
+
+`
+git push -u origin main
+`
