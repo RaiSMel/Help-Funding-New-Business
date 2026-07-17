@@ -3,9 +3,11 @@
 
 Antes de realizar os testes abaixo será necessário realizar a autenticação do usuário através do GitHub e Git com a chave SSH.
 
+Utilize a lista abaixo para ir até o conteúdo de interesse.
+
 - [Configurações do Git](#Configuracoes-do-Git)
 - [Inicializando e linkando pasta Git](#Inicializando-e-linkando-pasta-Git)
-- [](#)
+- [Comparando os commits, branches e verificando logs](#Comparando-os-commits,-branches-e-verificando-logs)
 - [](#)
 
 <hr>
@@ -55,9 +57,15 @@ git pull -u origin
 
 Após isso realizar as edições do seu projeto, assim iremos adicionar e verificar o status do que foi alterado nesse commit.
 
-Abaixo realizamos a adição das modificações gerais com o ".", caso queira adicionar um arquivo especifíco utilize o nome do arquivo no lugar do ponto (com sua extensão, exemplo: teste.txt)
+Abaixo realizamos a adição das modificações gerais com o "." no stage, caso queira adicionar um arquivo especifíco utilize o nome do arquivo no lugar do ponto (com sua extensão, exemplo: teste.txt)
 `
 git add .
+`
+
+abaixo caso queira tirar algo que não queira dentro do commit, uma saida para ignorar determinados arquivos é a utilização do arquivo .gitignore
+
+`
+git restore .
 `
 
 Para verificar o status do que será adicionado e enviado para o repositório remoto, utilize o comando abaixo
@@ -76,4 +84,54 @@ Agora para finalizar iremos fazer o envio com o comando de enviar que é o pull,
 
 `
 git push -u origin main
+`
+
+<br>
+<hr>
+<br>
+
+## Comparando os commits, branches e verificando logs
+
+o comando diff podemos validar a diferença e mudanças de dois commits, branches e filtar por arquivos em específico.
+
+Comando faz validação do que ocorreu de modificação para o que já foi para o stage e o que ainda não foi.
+
+`
+git diff
+`
+
+Verificar as modificações que estão dentro do stage 
+
+`
+git diff --staged
+`
+
+Verificar todos as modificações não comitadas
+
+`
+git diff HEAD
+`
+
+Podemos utilizar a forma abaixo para comparar ou dois commits ou duas branches
+
+`
+git diff EXE1 EXE1
+`
+
+Limitar a visualização de um arquivo conforme abaixo
+
+`
+git diff ARQUIVO
+`
+
+Para verificar o histórico de commits 
+
+`
+git log
+`
+
+Se caso queira validar quem fez quais modificações em quais commits em um arquivo utilize o comando 
+
+`
+git blame ARQUIVO
 `
